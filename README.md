@@ -1,1 +1,3 @@
-# coba-bem-rapor
+# Database Directory
+
+Place SQLite or other database files here.

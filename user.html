@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard User</title>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang, {{ username }}</h1>
+    <nav>
+      <ul>
+        <li><a href="/grades">Pilihan Triwulan</a></li>
+        <li><a href="#">Profil Diri</a></li>
+        <li><a href="#">Evaluasi BEM</a></li>
+        <li><a href="#">Evaluasi Biro/Departemen</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Nilai Rapor</h2>
+    <ul>
+      {% for triwulan, nilai in grades.items() %}
+        <li>{{ triwulan }}: {{ nilai }}</li>
+      {% endfor %}
+    </ul>
+  </main>
+</body>
+</html>
